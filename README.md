@@ -1,4 +1,4 @@
-# SVG Multi Color Icons
+# Using multi colored SVG Icons
 
 ![SVG Multi Color Icons](images/preview.png)
 
