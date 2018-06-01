@@ -1,5 +1,7 @@
 # SVG Multi Color Icons
 
+![SVG Multi Color Icons](images/preview.png)
+
 Multi colored SVG icons, as symbols, included with `<use>`.
 
 All colors are set with CSS vars.
