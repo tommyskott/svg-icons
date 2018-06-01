@@ -1,27 +1,72 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>SVG Icons</title>
+    <title>SVG Multi Color Icons</title>
 
     <style type="text/css">
+      *{
+        box-sizing: border-box;
+      }
 
+      html,
+      body{
+        margin: 0;
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        text-align: center;
+        background-color: #ddd;
+      }
+
+      .icon{
+        margin-top: 100px;
+        width: 500px;
+        height: 500px;
+      }
+
+      .icon.icon-colors{
+        --maze-outer-first-color: red;
+        --maze-outer-second-color: blue;
+        --maze-inner-first-color: green;
+        --maze-inner-second-color: purple;
+      }
     </style>
   </head>
   <body>
 
-    <svg xmlns="http://www.w3.org/2000/svg" style="display: none">
-      <symbol id="my-first-icon" viewBox="0 0 20 20">
-        <title>my-first-icon</title>
-        <path fill="var(--color-1)" d="..." />
-        <path fill="var(--color-2)" d="..." />
-        <path fill="var(--color-3)" d="..." />
+    <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+      <symbol id="icon-maze" viewBox="0 0 200 200">
+        <g>
+        	<polygon fill="var(--maze-outer-first-color)" points="200,200 0,200 0,0 	"/>
+        	<polygon fill="var(--maze-outer-second-color)" points="0,0 200,0 200,200 	"/>
+        	<polygon fill="var(--maze-inner-first-color)" points="50,50 150,50 150,150 	"/>
+        	<polygon fill="var(--maze-inner-second-color)" points="150,150 50,150 50,50 	"/>
+        </g>
+      </symbol>
+
+      <symbol id="mackan" viewBox="0 0 200 200">
+        <g>
+        	<polygon fill="var(--maze-outer-first-color)" points="200,200 0,200 0,0 	"/>
+        	<polygon fill="var(--maze-outer-second-color)" points="0,0 200,0 200,200 	"/>
+        	<polygon fill="var(--maze-inner-first-color)" points="50,50 150,50 150,150 	"/>
+        	<polygon fill="var(--maze-inner-second-color)" points="150,150 50,150 50,50 	"/>
+        </g>
       </symbol>
     </svg>
 
 
     <svg class="icon icon-colors">
-      <use xlink:href="#my-first-icon" href="#my-first-icon" />
+      <use xlink:href="#icon-maze" href="#icon-maze" />
     </svg>
+
+    <p>
+      SVG multi color icons as symbols that are referenced to with "&lt;use&gt;". <br>
+      All colors are set with CSS vars.
+    </p>
+
+    <p>
+      Credit to <a href="https://medium.freecodecamp.org/lets-make-your-svg-symbol-icons-multi-colored-with-css-variables-cddd1769fca4">Sarah Dayan</a>.
+    </p>
 
   </body>
 </html>
